@@ -1,0 +1,268 @@
+/* header, nav, structure générale de la page */
+
+:root{
+	--bg: #1C1F2B;
+	--bg-main: #F8F4E3;
+	--text: #1C1F2B;
+	--bg-card: #8B4513;
+}
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	display: flex;
+	
+	justify-content: center;
+	align-items: center;
+	
+	min-height: 100vh;
+	
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 15px;
+	padding-right: 15px;
+	
+	font-family: 'Poppins', 'Segoe UI', sans-serif;
+	background: var(--bg);
+}
+
+main{
+	width: 100%;
+	padding: 2em;
+
+	max-width: 480px;
+	margin: 0 auto;
+	
+	border-radius: 20px;
+	
+	box-shadow: 0 8px 20px
+	rgba(0, 0, 0, 0.25);
+	
+	background: var(--bg-main);
+}
+
+/* HEADER */
+
+header{
+	display: flex;
+	
+	flex-direction: row;
+	justify-content: space-between;
+	
+	padding-bottom: 15px;
+}
+
+#logo{
+	width: 92px;
+	height: 92px;
+	
+	object-fit: contain;
+}
+
+#photo{
+	width: 92px;
+	height: 92px;
+	
+	border-radius: 50%;
+	
+	object-fit: cover;
+	object-position: center;
+}
+
+/* SECTION - PROFIL */
+
+h1, h2{
+	text-align: center
+}
+
+h1{
+	margin-top: 10px;
+	font-size: 1.8em;
+	color: var(--text);
+}
+
+h2{
+	font-size: 1.1em;
+	font-style: italic;
+	font-weight: normal;
+	color: grey;
+}
+
+.photo{
+	width: 100%;
+	height: auto;
+	
+	border-radius: 5px;
+}
+
+.profil p{
+	margin-top: 25px;
+	margin-bottom: 25px;
+	
+	font-size: 1.3em;
+}
+
+.profil{
+	text-align: justify;
+}
+
+/* SECTION - ME SUIVRE */
+
+#button{
+	display: block;
+	width: 100%;
+	padding: 1em;
+	
+	margin-bottom: 25px;
+	
+	font-size: 1.4em;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	
+	border-radius: 20px;
+	
+	background: var(--bg-card);
+	color: var(--bg-main);
+}
+
+#icon{
+	width: 28px;
+	height: 28px;
+	object-fit: contain;
+}
+
+.liens{
+	display: flex;
+	
+	margin-bottom: 10px;
+	
+	flex-direction: row;
+	justify-content: left;
+	align-items: center;
+	
+	gap: 15px;
+}
+
+.liens a{
+	min-width: 0;
+	overflow-wrap: anywhere;
+}
+
+/* SECTION - BIO */
+
+h3{
+	font-size: 1.6em;
+	margin-top: 25px;
+	margin-bottom: 10px;
+}
+
+#bio{
+	border: 1px solid grey;
+	border-radius: 20px;	
+	
+	padding: 2em;
+	
+	font-size: 1.1em;
+	font-style: italic;
+	
+	text-align: justify;
+}
+
+#bio p{
+	margin-bottom: 15px;
+}
+
+#bio p:last-child{
+	margin-bottom: 0;
+}
+
+/* SECTION - CERTIFS */
+
+.certifs{
+	font-size: 0.7em;
+	font-style: italic;
+}
+
+#lien-credly{
+	display: block;
+
+	width: 100%;
+	
+	padding: 1em;
+
+	list-style: none;
+	text-decoration: none;
+	
+	font-size: 1.2em;
+	font-weight: bold;
+	
+	text-align: center;
+	
+	border-radius: 20px;
+	
+	box-shadow: 0 8px 20px
+	rgba(0, 0, 0, 0.25);
+	
+	background: var(--bg-card);
+	color: var(--bg-main);
+	
+	transition: 1s;
+}
+
+#lien-credly:hover{
+	transform: scale(1.05);
+}
+
+/* FOOTER */
+
+footer{
+	width: auto;
+	
+	margin-top: 30px;
+	
+	margin-left: -2em;
+	margin-right: -2em;
+	margin-bottom: -2em;
+	
+	padding: 3em;
+	
+	text-align: center;
+
+	background: black;
+	color: var(--bg-main);
+	
+	border-radius: 0 0 20px 20px;
+}
+
+/* MOBILE */
+
+@media (max-width: 400px){
+	
+	main{
+		padding: 1.5em;
+	}
+	
+	h1{
+		font-size: 1.5em;
+	}
+	
+	h2{
+		font-size: 1em;
+	}
+	
+	h3{
+		font-size: 1.3em;
+	}
+	
+	footer{
+		margin-left: -1.5em;
+		margin-right: -1.5em;
+		margin-bottom: -1.5em;
+		padding: 2em;
+	}
+}
